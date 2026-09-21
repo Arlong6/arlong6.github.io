@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tony — Apps (preview A)</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="stylesheet" href="../style.css?v=3">
+  <style>
+.apps a{align-items:center}
+.text small{display:none}
+.apps a .store{display:none}
+.shot{flex:none;width:60px;height:130px;object-fit:cover;object-position:top;border-radius:10px;box-shadow:0 0 0 1px rgba(0,0,0,.08),0 6px 16px -8px rgba(0,0,0,.35);transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+.shot.wide{width:112px;height:70px;border-radius:8px}
+.apps a:hover .shot{transform:translateY(-4px) rotate(-1.5deg) scale(1.04);box-shadow:0 0 0 1px rgba(0,0,0,.08),0 18px 30px -12px rgba(var(--c),.6)}
+.apps a .text{gap:2px}
+.apps a .text small{display:block;font-size:13px;color:rgb(var(--c));margin-top:6px}
+@media (min-width:640px){.shot{width:72px;height:156px}.shot.wide{width:136px;height:85px}}
+.pv{margin:40px 0 0;font-size:13px;color:var(--muted)}.pv a{color:inherit;margin:0 2px}</style>
+</head>
+<body>
+  <main>
+    <h1>Tony</h1>
+    <p class="lede">Small apps for everyday problems. Made in Taipei.</p>
+    <ul class="apps">
+      <li id="dayword" style="--c:181,107,73;--i:1"><a href="https://apps.apple.com/app/id6763968236" rel="noopener">
+        <img class="icon" src="../icons/dayword.png" alt="" width="56" height="56">
+        <span class="text"><b>DayWord</b><span>One English word a day, fully offline.</span><small>App Store</small></span>
+        <img class="shot" src="shots/dayword.jpg" alt="DayWord screenshot" loading="lazy">
+      </a></li>
+      <li id="nihongo-manabi" style="--c:91,63,181;--i:2"><a href="https://apps.apple.com/app/id6760352124" rel="noopener">
+        <img class="icon" src="../icons/nihongo-manabi.png" alt="" width="56" height="56">
+        <span class="text"><b>Nihongo Manabi</b><span>A Japanese tutor that's awake at 3 a.m.</span><small>App Store</small></span>
+        <img class="shot" src="shots/nihongo-manabi.jpg" alt="Nihongo Manabi screenshot" loading="lazy">
+      </a></li>
+      <li id="splity" style="--c:12,183,204;--i:3"><a href="https://apps.apple.com/app/id6760477233" rel="noopener">
+        <img class="icon" src="../icons/splity.png" alt="" width="56" height="56">
+        <span class="text"><b>Splity</b><span>Split bills with friends, no spreadsheet.</span><small>App Store</small></span>
+        <img class="shot" src="shots/splity.jpg" alt="Splity screenshot" loading="lazy">
+      </a></li>
+      <li id="mahjong" style="--c:227,81,11;--i:4"><a href="https://apps.apple.com/tw/app/id6760577332" rel="noopener">
+        <img class="icon" src="../icons/mahjong.png" alt="" width="56" height="56">
+        <span class="text"><b>麻將戰績</b><span>Score every mahjong game. Know who really wins.</span><small>App Store</small></span>
+        <img class="shot" src="shots/mahjong.jpg" alt="麻將戰績 screenshot" loading="lazy">
+      </a></li>
+      <li id="stocktrack" style="--c:224,74,95;--i:5"><a href="https://apps.apple.com/tw/app/id6802329246" rel="noopener">
+        <img class="icon" src="../icons/stocktrack.png" alt="" width="56" height="56">
+        <span class="text"><b>處置雷達</b><span>Taiwan stock disposition alerts, within 30 minutes.</span><small>App Store</small></span>
+        <img class="shot" src="shots/stocktrack.jpg" alt="處置雷達 screenshot" loading="lazy">
+      </a></li>
+      <li id="ai-job-autofill" style="--c:79,70,229;--i:6"><a href="https://chromewebstore.google.com/detail/ai-job-autofill/pnmochkacndcpgacmhlhanahgofengaj" rel="noopener">
+        <img class="icon" src="../icons/ai-job-autofill.png" alt="" width="56" height="56">
+        <span class="text"><b>AI Job Autofill</b><span>Greenhouse & Lever applications in one click.</span><small>Chrome</small></span>
+        
+      </a></li>
+      <li id="ai-tab-manager" style="--c:99,102,241;--i:7"><a href="https://chromewebstore.google.com/detail/ai-tab-manager/diklcnalgjdinhloiacaooidbmfhojch" rel="noopener">
+        <img class="icon" src="../icons/ai-tab-manager.png" alt="" width="56" height="56">
+        <span class="text"><b>AI Tab Manager</b><span>Tabs grouped by topic, pages summarized.</span><small>Chrome</small></span>
+        <img class="shot wide" src="shots/ai-tab-manager.jpg" alt="AI Tab Manager screenshot" loading="lazy">
+      </a></li>
+    </ul>
+
+    <footer>
+      <span>Tony Chien</span>
+      <a href="https://www.instagram.com/ccl_0120" rel="noopener">Instagram</a>
+      <a href="mailto:tony0912045596@gmail.com">Email</a>
+    </footer>
+    <p class="pv">Preview A · <a href="a.html">A</a> · <a href="b.html">B</a> · <a href="c.html">C</a> · <a href="../">current</a></p>
+  </main>
+</body>
+</html>

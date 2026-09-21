@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tony — Apps (preview C)</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="stylesheet" href="../style.css?v=3">
+  <style>
+.text small{display:none}
+.apps a .store{display:none}
+.art{flex:none;width:64px;height:64px;color:rgb(var(--c));transition:transform .35s var(--ease)}
+.art svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+.apps a:hover .art{transform:translateY(-3px) rotate(-4deg)}
+.apps a .text small{display:block;font-size:13px;color:rgb(var(--c));margin-top:6px}
+@media (min-width:640px){.art{width:76px;height:76px}}
+.pv{margin:40px 0 0;font-size:13px;color:var(--muted)}.pv a{color:inherit;margin:0 2px}</style>
+</head>
+<body>
+  <main>
+    <h1>Tony</h1>
+    <p class="lede">Small apps for everyday problems. Made in Taipei.</p>
+    <ul class="apps">
+      <li id="dayword" style="--c:181,107,73;--i:1"><a href="https://apps.apple.com/app/id6763968236" rel="noopener">
+        <img class="icon" src="../icons/dayword.png" alt="" width="56" height="56">
+        <span class="text"><b>DayWord</b><span>One English word a day, fully offline.</span><small>App Store</small></span>
+        <span class="art" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="8" y="10" width="32" height="28" rx="4"/><path d="M15 30l4-12 3 8 3-8 4 12"/><path d="M14 34h20"/></svg></span>
+      </a></li>
+      <li id="nihongo-manabi" style="--c:91,63,181;--i:2"><a href="https://apps.apple.com/app/id6760352124" rel="noopener">
+        <img class="icon" src="../icons/nihongo-manabi.png" alt="" width="56" height="56">
+        <span class="text"><b>Nihongo Manabi</b><span>A Japanese tutor that's awake at 3 a.m.</span><small>App Store</small></span>
+        <span class="art" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M10 12h28v18H22l-7 7v-7h-5z"/><path d="M19 19h10M24 17v11M20 25c3 0 6-2 8-5"/></svg></span>
+      </a></li>
+      <li id="splity" style="--c:12,183,204;--i:3"><a href="https://apps.apple.com/app/id6760477233" rel="noopener">
+        <img class="icon" src="../icons/splity.png" alt="" width="56" height="56">
+        <span class="text"><b>Splity</b><span>Split bills with friends, no spreadsheet.</span><small>App Store</small></span>
+        <span class="art" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M14 6h20v36l-3-3-3 3-4-3-4 3-3-3-3 3z"/><path d="M19 14h10M19 20h10M19 26h6"/><path d="M12 30l24 8" stroke-dasharray="3 3"/></svg></span>
+      </a></li>
+      <li id="mahjong" style="--c:227,81,11;--i:4"><a href="https://apps.apple.com/tw/app/id6760577332" rel="noopener">
+        <img class="icon" src="../icons/mahjong.png" alt="" width="56" height="56">
+        <span class="text"><b>麻將戰績</b><span>Score every mahjong game. Know who really wins.</span><small>App Store</small></span>
+        <span class="art" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="12" y="6" width="24" height="36" rx="4"/><text x="24" y="31" font-size="18" text-anchor="middle" font-family="-apple-system,PingFang TC,sans-serif" font-weight="600" fill="currentColor" stroke="none">中</text></svg></span>
+      </a></li>
+      <li id="stocktrack" style="--c:224,74,95;--i:5"><a href="https://apps.apple.com/tw/app/id6802329246" rel="noopener">
+        <img class="icon" src="../icons/stocktrack.png" alt="" width="56" height="56">
+        <span class="text"><b>處置雷達</b><span>Taiwan stock disposition alerts, within 30 minutes.</span><small>App Store</small></span>
+        <span class="art" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="16"/><circle cx="24" cy="24" r="8"/><path d="M24 24L24 8A16 16 0 0 1 38 17z" fill="currentColor" fill-opacity=".18" stroke="none"/><path d="M24 24l14-7"/><circle cx="16" cy="30" r="1.5" fill="currentColor" stroke="none"/></svg></span>
+      </a></li>
+      <li id="ai-job-autofill" style="--c:79,70,229;--i:6"><a href="https://chromewebstore.google.com/detail/ai-job-autofill/pnmochkacndcpgacmhlhanahgofengaj" rel="noopener">
+        <img class="icon" src="../icons/ai-job-autofill.png" alt="" width="56" height="56">
+        <span class="text"><b>AI Job Autofill</b><span>Greenhouse & Lever applications in one click.</span><small>Chrome</small></span>
+        <span class="art" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="10" y="6" width="28" height="36" rx="3"/><path d="M16 14h10M16 20h16M16 26h16M16 32h8"/><path d="M28 30l4 4 8-8"/></svg></span>
+      </a></li>
+      <li id="ai-tab-manager" style="--c:99,102,241;--i:7"><a href="https://chromewebstore.google.com/detail/ai-tab-manager/diklcnalgjdinhloiacaooidbmfhojch" rel="noopener">
+        <img class="icon" src="../icons/ai-tab-manager.png" alt="" width="56" height="56">
+        <span class="text"><b>AI Tab Manager</b><span>Tabs grouped by topic, pages summarized.</span><small>Chrome</small></span>
+        <span class="art" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M6 16h36v22a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3z"/><path d="M6 16v-5a3 3 0 0 1 3-3h8l3 4h6l3-4h8a3 3 0 0 1 3 3v5"/><path d="M14 26h20M14 32h14"/></svg></span>
+      </a></li>
+    </ul>
+
+    <footer>
+      <span>Tony Chien</span>
+      <a href="https://www.instagram.com/ccl_0120" rel="noopener">Instagram</a>
+      <a href="mailto:tony0912045596@gmail.com">Email</a>
+    </footer>
+    <p class="pv">Preview C · <a href="a.html">A</a> · <a href="b.html">B</a> · <a href="c.html">C</a> · <a href="../">current</a></p>
+  </main>
+</body>
+</html>
