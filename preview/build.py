@@ -40,7 +40,7 @@ FOOT = '''
       <a href="https://www.instagram.com/ccl_0120" rel="noopener">Instagram</a>
       <a href="mailto:tony0912045596@gmail.com">Email</a>
     </footer>
-    <p class="pv">Preview {V} · <a href="a.html">A</a> · <a href="b.html">B</a> · <a href="c.html">C</a> · <a href="../">current</a></p>
+    <p class="pv">Preview {V} · <a href="a.html">A</a> · <a href="b.html">B</a> · <a href="c.html">C</a> · <a href="d.html">D</a> · <a href="../">current</a></p>
   </main>
 </body>
 </html>
@@ -111,4 +111,8 @@ CSS_C = '''
 '''
 rows_c = [row(a, f'<span class="art" aria-hidden="true"><svg viewBox="0 0 48 48">{ART[a["id"]]}</svg></span>') for a in APPS]
 open('preview/c.html','w').write(page('C', CSS_C, TITLE, rows_c))
-print('built a/b/c')
+
+# ---------- D: A + B combined ----------
+CSS_D = CSS_B + CSS_A
+open('preview/d.html','w').write(page('D', CSS_D, hero_b, rows_a))
+print('built a/b/c/d')
