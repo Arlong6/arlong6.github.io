@@ -38,7 +38,7 @@ HEAD = '''<!doctype html>
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
   <main>
@@ -67,7 +67,7 @@ def page(v, css, hero, rows):
     return HEAD + hero + '    <ul class="apps">\n' + ''.join(rows) + '    </ul>\n' + FOOT
 
 TITLE = '''    <h1>Tony</h1>
-    <p class="lede">Small apps for everyday problems. Made in Taipei.</p>
+    <p class="lede">Small apps for everyday problems.</p>
 '''
 
 # ---------- A: real screenshots ----------
