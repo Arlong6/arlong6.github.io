@@ -30,12 +30,12 @@ HEAD = '''<!doctype html>
   <meta name="theme-color" content="#ffffff">
   <link rel="icon" type="image/png" href="favicon.png?v=2">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="canonical" href="https://arlong6.github.io/">
+  <link rel="canonical" href="https://arlong.is-a.dev/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Tony — Apps">
   <meta property="og:description" content="Small apps for everyday problems. iOS apps and Chrome extensions by Tony (arlong).">
-  <meta property="og:url" content="https://arlong6.github.io/">
-  <meta property="og:image" content="https://arlong6.github.io/og.png">
+  <meta property="og:url" content="https://arlong.is-a.dev/">
+  <meta property="og:image" content="https://arlong.is-a.dev/og.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
