@@ -39,7 +39,7 @@ HEAD = '''<!doctype html>
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="style.css?v=5">
+  <link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
   <main>
@@ -86,25 +86,25 @@ CSS_A = '''
 rows_a = [row(a, f'<img class="shot{" wide" if a["kind"]=="wide" else ""}" src="shots/{a["id"]}.jpg" alt="{a["name"]} screenshot" loading="lazy">') for a in APPS]
 pass
 
-# ---------- B: floating icons hero ----------
-POS = [  # left%, top%, size, rotate, duration, delay
- (4, 8, 64, -8, 7, 0), (30, 0, 52, 6, 8, -2), (58, 6, 60, -4, 6.5, -4),
- (84, 12, 56, 9, 7.5, -1), (14, 62, 52, 5, 8.5, -3), (44, 58, 68, -6, 7, -5), (74, 60, 56, 4, 6, -2.5),
-]
+# ---------- B: floating icons hero (tidy: two staggered rows, uniform size) ----------
+ROT = [-4, 3, -2, 4, 3, -3, 2]
+DUR = [7, 8, 6.5, 7.5, 8.5, 7, 6]
 CSS_B = '''
-.hero{position:relative;height:210px;margin:0 -8px 8px}
-.hero a{position:absolute;display:block;border-radius:22.37%;box-shadow:0 0 0 1px rgba(0,0,0,.06),0 14px 28px -14px rgba(var(--c),.7);animation:float var(--d) ease-in-out var(--dl) infinite;transition:transform .3s var(--ease)}
-.hero a:hover{animation-play-state:paused;transform:scale(1.08) rotate(0deg)!important}
+.hero{display:flex;flex-direction:column;gap:14px;margin:0 0 40px}
+.hero .r{display:flex;gap:18px}
+.hero .r + .r{padding-left:37px}
+.hero a{display:block;width:56px;height:56px;border-radius:22.37%;box-shadow:0 0 0 1px rgba(0,0,0,.06),0 10px 20px -12px rgba(var(--c),.55);animation:float var(--d) ease-in-out var(--dl) infinite;transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+.hero a:hover{animation-play-state:paused;transform:translateY(-4px) scale(1.06)!important;box-shadow:0 0 0 1px rgba(0,0,0,.06),0 16px 28px -12px rgba(var(--c),.7)}
 .hero img{display:block;width:100%;height:100%;border-radius:inherit}
-@keyframes float{0%,100%{transform:translateY(0) rotate(var(--r))}50%{transform:translateY(-9px) rotate(calc(var(--r) * -0.6))}}
-h1{margin-top:8px}
+@keyframes float{0%,100%{transform:translateY(0) rotate(var(--r))}50%{transform:translateY(-5px) rotate(calc(var(--r) * -0.5))}}
 .text small{display:none}
-@media (min-width:640px){.hero{height:260px;margin:0 -24px 16px}}
+@media (min-width:640px){.hero{gap:18px;margin-bottom:48px}.hero .r{gap:22px}.hero .r + .r{padding-left:43px}.hero a{width:64px;height:64px}}
 @media (prefers-reduced-motion:reduce){.hero a{animation:none}}
 '''
-hero_b = '    <div class="hero" aria-hidden="true">\n' + ''.join(
-  f'      <a href="#{a["id"]}" style="--c:{a["c"]};left:{p[0]}%;top:{p[1]}%;width:{p[2]}px;height:{p[2]}px;--r:{p[3]}deg;--d:{p[4]}s;--dl:{p[5]}s"><img src="icons/{a["id"]}.png" alt=""></a>\n'
-  for a,p in zip(APPS,POS)) + '    </div>\n' + TITLE
+def hero_link(i, a):
+    return f'<a href="#{a["id"]}" style="--c:{a["c"]};--r:{ROT[i]}deg;--d:{DUR[i]}s;--dl:{-i*0.9:.1f}s"><img src="icons/{a["id"]}.png" alt=""></a>'
+hero_b = ('    <div class="hero" aria-hidden="true">\n      <div class="r">' + ''.join(hero_link(i,a) for i,a in enumerate(APPS[:4])) +
+          '</div>\n      <div class="r">' + ''.join(hero_link(i,a) for i,a in enumerate(APPS) if i>=4) + '</div>\n    </div>\n' + TITLE)
 rows_b = [row(a, f'<span class="store">{a["store"]}</span>') for a in APPS]
 pass
 
