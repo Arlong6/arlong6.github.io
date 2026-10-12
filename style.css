@@ -189,5 +189,5 @@ footer a:hover { color: var(--ink); text-decoration-color: currentColor; }
 .shot.wide{width:112px;height:70px;border-radius:8px}
 .apps a:hover .shot{transform:translateY(-4px) rotate(-1.5deg) scale(1.04);box-shadow:0 0 0 1px rgba(0,0,0,.08),0 18px 30px -12px rgba(var(--c),.6)}
 .apps a .text{gap:2px}
-.apps a .text small{display:block;font-size:13px;color:rgb(var(--c));margin-top:6px}
+.apps a .text small{display:block;font-size:13px;color:rgb(var(--c));color:color-mix(in srgb,rgb(var(--c)) 60%,var(--ink));margin-top:6px}
 @media (min-width:640px){.shot{width:72px;height:156px}.shot.wide{width:136px;height:85px}}
