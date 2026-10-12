@@ -39,7 +39,7 @@ HEAD = '''<!doctype html>
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="style.css?v=6">
+  <link rel="stylesheet" href="style.css?v=7">
 </head>
 <body>
   <main>
@@ -80,7 +80,7 @@ CSS_A = '''
 .shot.wide{width:112px;height:70px;border-radius:8px}
 .apps a:hover .shot{transform:translateY(-4px) rotate(-1.5deg) scale(1.04);box-shadow:0 0 0 1px rgba(0,0,0,.08),0 18px 30px -12px rgba(var(--c),.6)}
 .apps a .text{gap:2px}
-.apps a .text small{display:block;font-size:13px;color:rgb(var(--c));margin-top:6px}
+.apps a .text small{display:block;font-size:13px;color:rgb(var(--c));color:color-mix(in srgb,rgb(var(--c)) 60%,var(--ink));margin-top:6px}
 @media (min-width:640px){.shot{width:72px;height:156px}.shot.wide{width:136px;height:85px}}
 '''
 rows_a = [row(a, f'<img class="shot{" wide" if a["kind"]=="wide" else ""}" src="shots/{a["id"]}.jpg" alt="{a["name"]} screenshot" loading="lazy">') for a in APPS]
@@ -115,7 +115,7 @@ CSS_C = '''
 .art{flex:none;width:64px;height:64px;color:rgb(var(--c));transition:transform .35s var(--ease)}
 .art svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
 .apps a:hover .art{transform:translateY(-3px) rotate(-4deg)}
-.apps a .text small{display:block;font-size:13px;color:rgb(var(--c));margin-top:6px}
+.apps a .text small{display:block;font-size:13px;color:rgb(var(--c));color:color-mix(in srgb,rgb(var(--c)) 60%,var(--ink));margin-top:6px}
 @media (min-width:640px){.art{width:76px;height:76px}}
 '''
 rows_c = [row(a, f'<span class="art" aria-hidden="true"><svg viewBox="0 0 48 48">{ART[a["id"]]}</svg></span>') for a in APPS]
